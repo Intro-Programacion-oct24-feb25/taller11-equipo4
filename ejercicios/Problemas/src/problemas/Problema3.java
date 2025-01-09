@@ -5,6 +5,9 @@
  */
 package problemas;
 
+import java.util.Locale;
+import java.util.Scanner;
+
 /**
  *
  * @author reroes
@@ -15,7 +18,51 @@ public class Problema3 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Scanner entrada = new Scanner(System.in);
+        String mensaje;
+        System.out.println("Ingrese la primera nota");
+        double nota = entrada.nextDouble();
+        System.out.println("Ingrese la segunda nota");
+        double nota2 = entrada.nextDouble();
+        System.out.println("Ingrese la tercera nota");
+        double nota3 = entrada.nextDouble();
+        System.out.println("Ingrese la cuarta nota");
+        double nota4 = entrada.nextDouble();
+        String resultado = obtenerPromedio(nota, nota2, nota3, nota4);
+        mensaje = "El promedio de las notas: " + nota + ", " + nota2 + ", "
+                + nota3 + ", " + nota4 + " es " + resultado;
+        mensaje = obtenerMayuscula(mensaje);
+        System.out.printf("%s\n", mensaje);
     }
-    
+
+    public static String obtenerPromedio(double a, double b, double c, double d) {
+        double promedio;
+        String cualitativo = "Fuera de Rango";
+        promedio = (a + b + c + d) / 4;
+        if (promedio >= 0 && promedio <= 5) {
+            cualitativo = "Regular";
+        } else {
+            if (promedio >= 5.1 && promedio <= 8) {
+                cualitativo = "Bueno";
+
+            } else {
+                if (promedio >= 8.1 && promedio <= 9) {
+
+                    cualitativo = "Muy Bueno";
+                } else {
+                    if (promedio >= 9.1 && promedio <= 10) {
+                        cualitativo = "Sobresaliente";
+
+                    }
+                }
+
+            }
+        }
+        return cualitativo;
+    }
+
+    public static String obtenerMayuscula(String a) {
+        a = a.toUpperCase();
+        return a;
+    }
 }

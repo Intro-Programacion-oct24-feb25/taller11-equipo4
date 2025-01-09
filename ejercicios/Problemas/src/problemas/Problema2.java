@@ -6,7 +6,6 @@
 package problemas;
 
 import java.util.Scanner;
-import java.util.Locale;
 
 /**
  *
