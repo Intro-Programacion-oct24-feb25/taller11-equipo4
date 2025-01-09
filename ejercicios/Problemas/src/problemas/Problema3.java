@@ -29,8 +29,8 @@ public class Problema3 {
         System.out.println("Ingrese la cuarta nota");
         double nota4 = entrada.nextDouble();
         String resultado = obtenerPromedio(nota, nota2, nota3, nota4);
-        mensaje = "El promedio de las notas: " + nota + ", " + nota2 + ", "
-                + nota3 + ", " + nota4 + " es " + resultado;
+        mensaje = String.format("El promedio de las notas: %.1f, %.1f, %.1f, "
+                + "%.1f es %s", nota, nota2, nota3, nota4, resultado);
         mensaje = obtenerMayuscula(mensaje);
         System.out.printf("%s\n", mensaje);
     }
