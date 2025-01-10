@@ -15,37 +15,35 @@ public class Problema7 {
     
      public static void main(String[] args) {
         
-        String[] ciudades = ingresarCiudades();
+        String[] elementos = obtenerElementos();
      
-        imprimirCiudades4o5(ciudades);
+        imprimirElementos(elementos);
     }
 
-    public static String[] ingresarCiudades() {
-        Scanner leer = new Scanner(System.in);
+    public static String[] obtenerElementos() {
+        Scanner entrada = new Scanner(System.in);
 
-        System.out.println("Ingrese el número de ciudades:");
-        int numCiudades = leer.nextInt();
-        leer.nextLine();
+        System.out.println("Ingrese el número de elementos");
+        int numEle = entrada.nextInt();
+        entrada.nextLine();
 
-        String[] ciudades = new String[numCiudades];
+        String[] arreglo = new String[numEle];
 
-        for (int i = 0; i < numCiudades; i++) {
-            System.out.print("Ingrese la ciudad:" + (i + 1) + " ");
-            ciudades[i] = leer.nextLine();
+        for (int i = 0; i < numEle; i++) {
+            System.out.println("Ingrese un elemento");
+            arreglo[i] = entrada.nextLine();
         }
 
-        return ciudades;
+        return arreglo;
     }
 
    
-    public static void imprimirCiudades4o5(String[] ciudades) {
-        System.out.println("\nCiudades con 4 o 5 caracteres");
-
-       
-        for (int i = 0; i < ciudades.length; i++) {
-            String ciudad = ciudades[i];
-            if (ciudad.length() == 4 || ciudad.length() == 5) {
-                System.out.println(ciudad);
+    public static void imprimirElementos(String[] arreglo) {
+        System.out.println("Elementos de 4 o 5 caracteres");
+        for (int i = 0; i < arreglo.length; i++) {
+            String elemento = arreglo[i];
+            if (elemento.length() == 4 || elemento.length() == 5) {
+                System.out.println(arreglo[i]);
             }
         }
     }
