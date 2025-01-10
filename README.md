@@ -1,7 +1,7 @@
 # Taller 11 (Laboratorio)
 
-## Dalton Floes 
-## Jhody Camacas 
+### Dalton Floes 
+### Jhody Camacas 
 ## Construcción de programas usando módulos y funciones
 
 ### Problema 01
